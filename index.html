@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Number</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="main">
+        <button onclick="totalClick(1)">+</button>
+        <span id="totalClicks">0</span>
+        <button onclick="totalClick(-1)">-</button>
+    </div>
+    <div class="reset">
+        <button onclick="totalClick(0)">RESET</button>
+    </div>
+
+    <script>
+        function totalClick(click){
+            const totalClick = document.getElementById('totalClicks')
+            const sumValue = parseInt(totalClicks.innerText) + click
+            totalClicks.innerText = sumValue
+
+            if (click ===0){
+                totalClicks.innerText = 0
+            }
+        }
+    </script>
+</body>
+</html>
